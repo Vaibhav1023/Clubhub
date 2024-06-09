@@ -16,7 +16,7 @@ import { Victor_Mono } from "next/font/google";
 const Sans = Open_Sans({ subsets: ["latin"] });
 const victor = Victor_Mono({subsets:["greek"]})
 export const metadata: Metadata = {
-  title: "Bruh - be right",
+  title: "ClubHub | Your Place To Talk and Hang Out",
   description: "This app is in developing and testing phase.",
 
 };

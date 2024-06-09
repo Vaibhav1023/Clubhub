@@ -16,7 +16,7 @@ import {
 interface ServerSearchProps {
   data: {
     label: string;
-    type: "channel" | "member",
+    type: "channel" | "member" |"server",
     data: {
       icon: React.ReactNode;
       name: string;
@@ -44,7 +44,7 @@ export const ServerSearch = ({
     return () => document.removeEventListener("keydown", down)
   }, []);
 
-  const onClick = ({ id, type }: { id: string, type: "channel" | "member"}) => {
+  const onClick = ({ id, type }: { id: string, type: "channel" | "member" | "server"}) => {
     setOpen(false);
 
     if (type === "member") {
@@ -53,6 +53,10 @@ export const ServerSearch = ({
 
     if (type === "channel") {
       return router.push(`/servers/${params?.serverId}/channels/${id}`)
+    }
+
+    if (type === "server") {
+      return router.push(`/servers/${params?.serverId}`)
     }
   }
 

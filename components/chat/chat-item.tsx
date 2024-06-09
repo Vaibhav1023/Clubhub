@@ -193,7 +193,7 @@ export const ChatItem = ({
                                     target="_blank"
                                     rel="noopener noreference"
                                     className="ml-2 text-sm text-indigo-500 hover:underline">
-                                        {}
+                                        {}PDF
                                 </a>
 
                             </div>

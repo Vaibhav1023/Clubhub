@@ -81,6 +81,15 @@ export const ChatInput = ({
     //     setScheduledMessagesCount(totalScheduledMessageCount);
     //   }
 
+        async function scheduleMessage() {
+        // Wrap setTimeout in a Promise to make it awaitable
+        const wait = (ms: number | undefined) => new Promise(resolve => setTimeout(resolve, ms));
+        
+        // Wait for the specified delay
+        
+        // Log the message (or perform any other action)
+        console.log();
+    }
 
     return(
         <Form {...form}
@@ -110,7 +119,7 @@ export const ChatInput = ({
                                         />
                                     </div>
                                     <div className="absolute top-7 right-8">
-                                        <Clock1 onClick={()=> {}}/>
+                                        <Clock1 />
                                     </div>
                                     
                                 </div>

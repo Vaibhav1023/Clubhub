@@ -13,6 +13,9 @@ import { NavigationItem } from "./navigation-item";
 import { Coffee, Ghost, Gitlab, Merge } from "lucide-react";
 import { ActionTooltip } from "../action-tooltip";
 import { NavigationThreads } from "./navigation-threads";
+import Image from "next/image";
+import clubHub from "/public/ch.png"
+import { NavigationAi } from "./navigation-ai";
 
 export const NavigationSidebar = async () => {
   const profile = await currentProfile();
@@ -31,6 +34,7 @@ export const NavigationSidebar = async () => {
     }
   });
 
+
   return (
     
     <div
@@ -39,15 +43,23 @@ export const NavigationSidebar = async () => {
       <ActionTooltip
       side="right"
       align="start"
-      label="bruh"
+      label="clubhub"
       >
-        <div className="mt-2">
-        <Ghost className="h-7 w-7 ml-0 pl-0 text-sky-500"/>
+        <div className="mt-2 mr-2">
+          <Image 
+              src={clubHub}
+              alt=""
+              width={100}
+              height={100}
+              />
+            
+        {/* <Ghost className="h-7 w-7 ml-0 pl-0 text-sky-500"/> */}
         </div>
       </ActionTooltip>
 
       <NavigationAction />
-      {/* <NavigationThreads/> */}
+      <NavigationThreads/>
+      {/* <NavigationAi/> */}
       <Separator
         className="w-10 h-[2px] bg-zinc-300 dark:bg-zinc-400 rounded-md mx-auto"
       />

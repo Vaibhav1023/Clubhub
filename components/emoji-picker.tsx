@@ -21,7 +21,7 @@ export const EmojiPicker = ({
     return(
         <Popover>
             <PopoverTrigger>
-                <Smile className="text-zinc-500 hover:text-zinc-600 transition"/>
+                <Smile className="text-zinc-300 hover:text-zinc-600 transition"/>
             </PopoverTrigger>
             <PopoverContent 
                 side="right"

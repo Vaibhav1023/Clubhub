@@ -5,7 +5,7 @@ import { ChannelType, MemberRole } from "@prisma/client";
 import { ServerHeader } from "./server-header";
 import { ScrollArea } from "../ui/scroll-area";
 import { ServerSearch } from "./server-search";
-import { AudioLines, AudioWaveform, Gitlab, Shell, ShieldAlert, ShieldCheck, Video } from "lucide-react";
+import { AudioLines, AudioWaveform, Ghost, Gitlab, Shell, ShieldAlert, ShieldCheck, Video } from "lucide-react";
 import { Separator } from "../ui/separator";
 import { ServerSection } from "./server-section";
 import { ServerChannel } from "./server-channel";
@@ -26,8 +26,8 @@ const iconMap = {
 
 const roleIconMap = {
   [MemberRole.GUEST]: null,
-  [MemberRole.MODERATOR]: <ShieldCheck className="h-4 w-4 mr-2 text-indigo-500"/>,
-  [MemberRole.ADMIN]: <ShieldAlert className="h-4 w-4 mr-2 text-indigo-500"/>,
+  [MemberRole.MODERATOR]: <Ghost className="h-4 w-4 mr-2 text-indigo-500"/>,
+  [MemberRole.ADMIN]: <ShieldCheck className="h-4 w-4 mr-2 text-indigo-500"/>,
 }
 export const ServerSidebar = async({
   serverId
@@ -90,7 +90,7 @@ const role = server.members.find((member) => member.profileId === profile.id)?.r
                 }))
               },
               {
-                label: "Voice Channels",
+                label: "Huddles",
                 type: "channel",
                 data: audioChannels?.map((channel) => ({
                   id: channel.id,
@@ -134,7 +134,7 @@ const role = server.members.find((member) => member.profileId === profile.id)?.r
                 sectionType="channels"
                 channelType={ChannelType.TEXT}
                 role={role}
-                label="Text Channels"  
+                label="Huddles"  
                 />
                 {textChannels.map((channel) => (
                   <ServerChannel
@@ -205,7 +205,7 @@ const role = server.members.find((member) => member.profileId === profile.id)?.r
               <ServerSection 
                 sectionType="members"
                 role={role}
-                label="Members"  
+                label="Direct Messages"  
                 server={server}
                 />
                 {members.map((member) => (

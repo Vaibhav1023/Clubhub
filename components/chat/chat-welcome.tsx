@@ -19,12 +19,12 @@ export const ChatWelcom = ({
                     <Gitlab className="h-12 w-12 text-white"/>
                 </div>
             )}
-            <p className=" text-xl md:text-3xl font-bold">
-                {type === "channel" ? "Welcome to @" : ""}{name}
+            <p className=" text-xl md:text-2xl font-bold">
+                {type === "channel" ? "👋Welcome to @" : ""}{name}
             </p>
             <p className={victor.className}>
                 {type === "channel" 
-                ? `This is the start of the @${name} channel`
+                ? `This channel is for everything @${name}. Hold meetings, share docs and make decisions together with your team.`
                 : `This is the start of your conversation with ${name}`
                 }
             </p>

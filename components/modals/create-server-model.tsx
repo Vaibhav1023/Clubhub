@@ -110,7 +110,7 @@ const form = useForm({
                                         <FormControl>
                                             <Input 
                                                 disabled={isLoading} 
-                                                className="bg-white border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                                                className="bg-black border-0 focus-visible:ring-0 text-white focus-visible:ring-offset-0"
                                                 placeholder="Enter Your Server" 
                                                 {...field}
                                                 >
@@ -122,7 +122,7 @@ const form = useForm({
                                 )}
                                 />
                         </div>
-                        <DialogFooter className="bg-stone-600 px-6 py-2">
+                        <DialogFooter className="bg-stone-800 px-6 py-2">
                             <Button disabled={isLoading}
                                     variant={"primary"}>
                                 Create
