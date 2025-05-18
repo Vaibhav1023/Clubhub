@@ -1,3 +1,5 @@
+This application lets users join a shared chatroom, send and receive messages in real time, and view message history — all built with a performant, type-safe codebase using modern tools and best practices.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
